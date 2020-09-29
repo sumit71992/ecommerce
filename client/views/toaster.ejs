@@ -1,0 +1,49 @@
+<%if(messageType==="Failure"){%>
+<section class="toaster fail-msg" id="block">
+  <div class="icon">
+    <i class="fas fa-times-circle"></i>
+  </div>
+  <div class="msg">
+    <h4>Failure</h4>
+    <span><%=message%></span>
+  </div>
+  <div class="icon">
+    <i class="fas fa-times" id="close"></i>
+  </div>
+</section>
+<%}else if(messageType==="Success"){%>
+<section class="toaster res-msg" id="block">
+  <div class="icons">
+    <i class="fas fa-check-circle"></i>
+  </div>
+  <div class="msgs">
+    <h4>Success</h4>
+    <span><%=message%></span>
+  </div>
+  <div class="icons">
+    <i class="fas fa-times" id="close"></i>
+  </div>
+</section>
+<%}%>
+  <script>
+    const toaster = document.getElementById("block");
+    if (toaster) {
+      async function clearToaster() {
+        const fetchData = await fetch("/clearToaster", { method: "put" });
+      };
+      setTimeout(clearToaster, 100);
+      const closeButton = toaster.getElementById("close");
+      closeButton.addEventListener("click", () => {
+        toaster.style.display = "none";
+      })
+    }
+  </script>
+  <script>
+   
+      var cross=document.getElementById("close");
+        var box=document.getElementById("block");
+        cross.addEventListener("click", function(){
+            box.style.display="none";
+        });
+    
+  </script>

@@ -1,0 +1,115 @@
+$white-color: white;
+$dark-blue: #2a2d3e;
+$light-blue: #9cbfda;
+$bright-blue: #0173b2;
+$dark-grey: #525659;
+$light-grey: #999;
+
+h1,h2,h3,h4{
+  font-family: 'Nexa-Bold';
+}
+h1{
+  font-size: 1.7rem;
+  color: $dark-blue;
+  font-weight: 900;
+  
+}
+
+h2{
+  font-size:1.6rem;
+  padding:0 1.1rem;
+  color: $dark-blue;
+  font-weight: 700;
+  margin: 1rem;
+}
+
+
+h3{
+  font-size: 1.2rem;
+  margin: 1rem auto;
+  color: $white-color;
+  margin: 1rem;
+}
+
+h4{
+  font-size: 1.1rem;
+  margin: 1rem;
+}
+
+label{
+  font-family: 'nexa-light';
+  font-size: 1rem;
+}
+p{
+  font-family:'nexa-light';
+  line-height: 1.2rem;
+  font-size: 1rem;
+  margin: 1rem 0;
+  letter-spacing: 0.05rem;
+  color: $dark-blue;
+}
+
+li{
+  font-family:'nexa-light';
+}
+
+button{
+  color: $white-color;
+  font-size:0.8rem;
+  padding:0.5rem 1rem;
+  width:50%;
+  background-color: #040427;
+  margin-top: 1rem;
+  border:none;
+  letter-spacing: 0.05rem;
+}
+
+
+
+img{
+  display:block;
+}
+
+@media only screen and (min-width: 768px)
+{
+  
+  h1{
+      font-size: 2.5rem;
+  }
+  
+  h2{
+      font-size:2rem;
+  }
+  h3{
+      font-size: 1.5rem;
+      margin: 1rem auto;
+  }
+
+  h4{
+      font-size: 1.1rem;
+  }
+  p{
+      font-family:'nexa-light';
+      line-height: 1.3rem;
+      font-size: 1rem;
+      margin: 2rem 0;
+      letter-spacing: 0.06rem;
+  }
+  a{
+      text-decoration: none;
+  }
+}
+
+@media only screen and (min-width: 1025px){
+  h1,h2{
+      font-size: 2.4rem;
+  }
+  p{
+      font-size: 1.2rem;
+  }
+
+  h2{
+      padding:0;
+  }
+  
+}

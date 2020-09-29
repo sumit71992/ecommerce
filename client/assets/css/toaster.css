@@ -1,0 +1,102 @@
+.fail-msg {
+  display: grid;
+  grid-template-columns: 10% 70% 20%;
+  background-color: #fdfdfd;
+  position: absolute;
+  top: 6rem;
+  right: 2rem;
+  column-gap: 0.5rem;
+  animation: animation 3s ease-in;
+  animation-fill-mode: forwards;
+  padding: 0.5rem 0.5rem 0.5rem 0.2rem;
+  border-left: 0.25rem solid red;
+  width: 16rem;
+}
+
+.fail-msg .icon {
+  margin-top: 0.5rem;
+  font-family: 'nexa-bold';
+  color: red;
+}
+
+.fail-msg .icon #close {
+  color: #7a7777;
+}
+
+.fail-msg .msg h4 {
+  color: red;
+  font-size: 1.1rem;
+  margin: 0;
+  font-family: 'nexa-bold';
+  text-align: center;
+}
+
+.fail-msg .msg span {
+  color: red;
+  font-size: 0.9rem;
+  margin: 0;
+  text-align: center;
+}
+
+.res-msg {
+  display: grid;
+  grid-template-columns: 10% 70% 20%;
+  background-color: #fdfdfd;
+  position: absolute;
+  top: 6rem;
+  right: 2rem;
+  column-gap: 0.5rem;
+  animation: animation 3s ease-in;
+  animation-fill-mode: forwards;
+  padding: 0.5rem 0.5rem 0.5rem 0.2rem;
+  border-left: 0.25rem solid green;
+  width: 16rem;
+}
+
+.res-msg .icons {
+  margin-top: 0.5rem;
+  font-family: 'nexa-bold';
+  color: green;
+}
+
+.res-msg .icons #close {
+  color: #7a7777;
+}
+
+.res-msg .msgs {
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.res-msg .msgs h4 {
+  color: green;
+  font-size: 1.1rem;
+  margin: 0;
+  font-family: 'nexa-bold';
+  text-align: center;
+}
+
+.res-msg .msgs span {
+  color: green;
+  font-size: 0.9rem;
+  margin: 0;
+  text-align: center;
+}
+
+@keyframes animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
