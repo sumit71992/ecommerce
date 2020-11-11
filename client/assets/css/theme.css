@@ -18,8 +18,8 @@ h2 {
 
 h3 {
   font-size: 1.2rem;
-  margin: 1rem auto;
-  color: white;
+  font-weight: 600;
+  color: #2a2d3e;
   margin: 1rem;
 }
 
@@ -42,16 +42,20 @@ p {
   color: #2a2d3e;
 }
 
+body {
+  background-color: #d0d9ff;
+}
+
 li {
   font-family: 'nexa-light';
 }
 
 button {
-  color: white;
+  color: #ffffff;
   font-size: 0.8rem;
-  padding: 0.5rem 1rem;
+  padding: 0.3rem;
   width: 50%;
-  background-color: #040427;
+  background-color: #04043d;
   margin-top: 1rem;
   border: none;
   letter-spacing: 0.05rem;

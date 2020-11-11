@@ -1,4 +1,4 @@
-const userData = require("../databases/userSchema");
+const userData = require("../databases/usersSchema");
 const schedule = require("../databases/scheduleSchema");
 const mongoose = require("mongoose");
 const appointment = require("../databases/AppointmentSchema");

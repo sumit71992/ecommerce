@@ -1,0 +1,303 @@
+h1, h2, h3, h4 {
+  font-family: 'Nexa-Bold';
+}
+
+h1 {
+  font-size: 1.7rem;
+  color: #2a2d3e;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 1.6rem;
+  padding: 0 1.1rem;
+  color: #2a2d3e;
+  font-weight: 700;
+  margin: 1rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2a2d3e;
+  margin: 1rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+  margin: 1rem;
+}
+
+label {
+  font-family: 'nexa-light';
+  font-size: 1rem;
+}
+
+p {
+  font-family: 'nexa-light';
+  line-height: 1.2rem;
+  font-size: 1rem;
+  margin: 1rem 0;
+  letter-spacing: 0.05rem;
+  color: #2a2d3e;
+}
+
+body {
+  background-color: #d0d9ff;
+}
+
+li {
+  font-family: 'nexa-light';
+}
+
+button {
+  color: #ffffff;
+  font-size: 0.8rem;
+  padding: 0.3rem;
+  width: 50%;
+  background-color: #04043d;
+  margin-top: 1rem;
+  border: none;
+  letter-spacing: 0.05rem;
+}
+
+img {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+    margin: 1rem auto;
+  }
+  h4 {
+    font-size: 1.1rem;
+  }
+  p {
+    font-family: 'nexa-light';
+    line-height: 1.3rem;
+    font-size: 1rem;
+    margin: 2rem 0;
+    letter-spacing: 0.06rem;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  h1, h2 {
+    font-size: 2.4rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  h2 {
+    padding: 0;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  height: 5rem;
+  box-shadow: 2px 3px 3px 2px #00000065;
+  background-color: #ffffff;
+}
+
+.grid-container .nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.grid-container .nav span {
+  margin-left: 2rem;
+}
+
+.grid-container .nav span a {
+  color: #525659;
+  font-weight: 400;
+}
+
+.grid-container .nav .search form {
+  display: flex;
+  align-items: center;
+}
+
+.grid-container .nav .search form button {
+  margin: 0 0 0 0.1rem;
+  background-color: #deebf7;
+  color: black;
+}
+
+.grid-container .image {
+  height: 5rem;
+  width: 8rem;
+  padding: 0;
+  margin-left: 4rem;
+}
+
+.grid-container .image img {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.grid-container .profile {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 4rem;
+  align-items: center;
+}
+
+.grid-container .profile .cart {
+  color: #000025;
+  margin-right: 2rem;
+  position: relative;
+}
+
+.grid-container .profile .cart i {
+  font-size: 1.5rem;
+}
+
+.grid-container .profile .cart .item {
+  position: absolute;
+  top: -0.5rem;
+  right: 0.1rem;
+  font-weight: bold;
+  color: blue;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.form form {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1px 1px 6px 2px black;
+}
+
+.form form .forgot a {
+  color: blue;
+}
+
+.form form .login {
+  border-bottom: 1px solid gray;
+  width: 100%;
+  text-align: center;
+}
+
+.form form input {
+  margin: 1rem;
+  width: 17rem;
+  height: 2rem;
+}
+
+.form form button {
+  margin-bottom: 1rem;
+  height: 2rem;
+}
+
+.form form span {
+  margin-bottom: 1rem;
+}
+
+.form form span a {
+  color: blue;
+}
+
+.flex-container {
+  display: flex;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.flex-container .product {
+  background-color: #cccccc;
+  margin: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.flex-container .product .details {
+  margin: 0.5rem;
+  font-weight: bold;
+}
+
+.flex-container .product .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.flex-container .product .bottom .price {
+  font-weight: bold;
+  color: #01051a;
+}
+
+.flex-container .product .bottom .checkout {
+  border: 1px solid blue;
+  padding: 0.25rem 0.5rem;
+  border-radius: 2rem;
+  background-color: #00008d;
+  color: white;
+  font-weight: bold;
+}
+
+.flex-container .product .bottom .checkout:hover {
+  cursor: pointer;
+}
+
+.flex-container .product .display {
+  height: 12rem;
+  width: 10rem;
+}
+
+.flex-container .product .display img {
+  height: 100%;
+  width: 100%;
+}
+
+.order {
+  padding: 3rem 5rem;
+}
+
+.order table {
+  width: 100%;
+}
+
+.order table thead {
+  background-color: #3e30fd;
+  color: white;
+}
+
+.order table thead th {
+  padding: 0.5rem;
+}
+
+.order table tbody td {
+  border: 1px solid rgba(0, 0, 0, 0.712);
+  padding: 0.5rem 1rem;
+}
+
+.order table tbody td a {
+  color: blue;
+}

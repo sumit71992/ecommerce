@@ -1,6 +1,6 @@
-$white-color: white;
+$white: #ffffff;
 $dark-blue: #2a2d3e;
-$light-blue: #9cbfda;
+$light-blue: #d0d9ff;
 $bright-blue: #0173b2;
 $dark-grey: #525659;
 $light-grey: #999;
@@ -26,8 +26,8 @@ h2{
 
 h3{
   font-size: 1.2rem;
-  margin: 1rem auto;
-  color: $white-color;
+  font-weight: 600;
+  color: $dark-blue;
   margin: 1rem;
 }
 
@@ -48,17 +48,19 @@ p{
   letter-spacing: 0.05rem;
   color: $dark-blue;
 }
-
+body{
+  background-color: $light-blue;
+}
 li{
   font-family:'nexa-light';
 }
 
 button{
-  color: $white-color;
+  color: $white;
   font-size:0.8rem;
-  padding:0.5rem 1rem;
+  padding: 0.3rem;
   width:50%;
-  background-color: #040427;
+  background-color: #04043d;
   margin-top: 1rem;
   border:none;
   letter-spacing: 0.05rem;

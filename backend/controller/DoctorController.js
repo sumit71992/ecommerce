@@ -1,4 +1,4 @@
-const userData = require("../databases/userSchema");
+const userData = require("../databases/usersSchema");
 module.exports = {
   allDoctors: allDoctors,
   aboutDoctor: aboutDoctor,

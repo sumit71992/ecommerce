@@ -1,6 +1,6 @@
 const Nexmo = require('nexmo');
-const db = require("../databases/userSchema");
-const userData = require('../databases/userSchema');
+const db = require("../databases/usersSchema");
+const userData = require('../databases/usersSchema');
 module.exports = {
   otp_request: otp_request,
   otp_resend: otp_resend,

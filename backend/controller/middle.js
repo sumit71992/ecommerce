@@ -1,26 +1,19 @@
-const user = require("../databases/userSchema");
+const user = require("../databases/usersSchema");
 
 const notloggedin = (req, res, next) => {
   if (!req.session.loggedUser) {
     req.session.message = "Please Login First";
     req.session.messageType = "Failure";
-    res.redirect("/emaillogin");
+    res.redirect("/login");
   } else {
     next();
   }
 };
 const loggedin = (req, res, next) => {
   if (req.session.loggedUser) {
-    res.redirect("/profile");
+    res.redirect("/index");
   } else {
     next();
-  }
-};
-const login = (req, res, next) => {
-  if (!req.session.loggedUser || req.session.loggedUser) {
-    next();
-  } else {
-    res.redirect("/emaillogin");
   }
 };
 const ifNotDoctor = async (req, res, next) => {
@@ -73,7 +66,6 @@ const clearToaster = async (req, res) => {
 module.exports = {
   notloggedin: notloggedin,
   loggedin: loggedin,
-  login: login,
   ifNotDoctor: ifNotDoctor,
   appointment:appointment,
   doctorProfileComplete: doctorProfileComplete,

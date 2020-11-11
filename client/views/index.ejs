@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="/" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="theme.css" />
+  <title>Home</title>
+</head>
+
+<body>
+  <%-include("header")-%>
+  <div class="flex-container">
+    <% for(let i =0; i<user.product.length; i++){ %> 
+    <div class="product">
+      <div class="display">
+        <img src="uploads/<%= user.product[i].Image%>" alt="">
+      </div>
+      <div class="details">
+        <span><%= (user.product[i].productName)[0].toUpperCase() + (user.product[i].productName).slice(1)%></span>
+      </div>
+      <div class="bottom">
+        <div class="price">
+          <span>Rs. <%= user.product[i].price%></span>
+        </div>
+        <div class="checkout" data-carts="<%=JSON.stringify(user.product[i])%>">
+          <span>+ Add</span>
+        </div>
+      </div>
+    </div>
+    <%}%>
+  </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+
+let cart = document.querySelectorAll(".checkout");
+let counter = document.querySelector("#counter");
+    
+function updateCart(carts){
+  axios.post("/update-cart", carts).then(res =>{
+    console.log(res);
+    counter.innerText = res.data.totalQty;
+  })
+}
+
+    cart.forEach((btn)=>{
+      btn.addEventListener("click", (e)=>{
+        let carts = JSON.parse(btn.dataset.carts);
+        updateCart(carts)
+        console.log(carts);
+      })
+    })
+  </script>
+</body>
+
+</html>

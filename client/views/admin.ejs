@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="seller.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <title>Cart</title>
+  </head>
+
+  <body>
+    <%-include("header")-%>
+    <div class="order">
+      <h3>All Orders</h3>
+      <table>
+        <thead>
+         <tr>
+           <th>OrderId</th>
+           <th>Number</th>
+           <th>Address</th>
+           <th>Time</th>
+         </tr>
+        </thead>
+        <tbody>
+          <%for(let i =0; i<user.allOrder.length; i++){%>
+          <tr>
+            <td> <a href="/"><%=user.allOrder[i]._id%></a></td>
+            <td><%=user.allOrder[i].phoneNumber%></td>
+            <td><%=user.allOrder[i].address%></td>
+            <td><%=(user.allOrder[i].createdAt.toString().split(" ")[1]+","+user.allOrder[i].createdAt.toString().split(" ")[2]+","+user.allOrder[i].createdAt.toString().split(" ")[3]+","+user.allOrder[i].createdAt.toString().split(" ")[4])%></td>
+          </tr>
+          <%}%>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

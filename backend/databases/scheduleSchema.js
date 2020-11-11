@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const userData = require("./userSchema");
+const userData = require("./usersSchema");
 const subSchedule = require("../databases/SubScheduleSchema")
 const scheduleSchema = new mongoose.Schema(
     {

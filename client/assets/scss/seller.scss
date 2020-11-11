@@ -1,0 +1,194 @@
+@import "theme";
+.seller{
+  display: grid;
+  grid-template-columns: 20% 80%;
+  margin: 0.5rem 4rem 0.5rem 4.5rem;
+  column-gap: 0.5rem;
+  .dashboard{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(250, 250, 250);
+    box-shadow: 1px 0px 1px 1px rgba(0, 0, 0, 0.479);
+    h3{
+      text-align: center;
+    }
+    ul{
+      margin: 2rem;
+      li{
+        margin: 0.5rem;
+        padding: 0.5rem;
+        box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.336);
+        a{
+          color: $dark-grey;
+        }
+      }
+    }
+  }
+  .products{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(250, 250, 250);
+    box-shadow: -1px 0px 1px 1px rgba(0, 0, 0, 0.479);
+    h4{
+      text-align: center;
+      font-family: 'nexa-bold';
+      margin: 14rem 0;
+    }
+    .form{
+      display: flex;
+      justify-content: center;
+      .item{
+        display: flex;
+        flex-direction: column;
+        button{
+          align-self: center;
+        }
+        label{
+          margin: auto 1rem;
+        }
+        textarea{
+          margin: auto 1rem 1rem 1rem;
+          height: 5rem;
+        }
+      }
+    }
+    .list{
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+      align-items: center;
+      box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.37);
+      h3{
+        margin: 0;
+      }
+      button{
+        padding: 0.7rem 1rem 0.7rem 1rem;
+        width: fit-content;
+        height: fit-content;
+        background-color: rgb(0, 0, 129);
+        margin: 0;
+      }
+    }
+  }
+}
+
+.cart{
+  display: flex;
+  justify-content: center;
+  .empty{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3rem;
+    height: 30%;
+    width: 30%;
+    img{
+      height: 90%;
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+    a{
+      background-color: blue;
+      padding: 0.5rem;
+      border-radius: 1rem;
+      box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.308);
+      color: white;
+      width: fit-content;
+      align-self: center;
+    }
+    span{
+      align-self: center;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+  }
+  .order-container{
+    background-color: white;
+    margin-top: 2rem;
+    width: 88%;
+    
+    .order{
+      display: flex;
+      justify-content: flex-start;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.096);
+      h3{
+        margin: 2rem 0;
+      }
+      img{
+        margin: 2rem;
+      }
+    }
+    .order-items{
+      padding: 2rem 4rem 2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.123);
+      .display{
+        display: flex;
+        align-items: center;
+        .specs{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          align-content: center;
+          margin-left: 2rem;
+          .name{
+            font-weight: bold;;
+          }
+        }
+        .photo{
+          width: 7rem;
+          height: 7rem;
+          border-radius: 50%;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+    .sub-order-container{
+      padding: 2rem 4rem;
+      .total{
+        display: flex;
+        justify-content: flex-end;
+        .sub-total{
+          margin-right: 1rem;
+          font-weight: bold;
+        }
+        .total-price{
+          font-weight: bold;
+          color: rgb(2, 2, 73);
+        }
+      }
+      .ship-address{
+        margin: 2rem 0 0 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .low{
+        margin: 0.6rem 0 2rem 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .checkout{
+        display: flex;
+        justify-content: flex-end;
+        button{
+          padding: 0.7rem 1rem;
+          width: fit-content;
+          border-radius: 3rem;
+        }
+        a{
+          padding: 0.7rem 1rem;
+          width: fit-content;
+          border-radius: 3rem;
+          background-color: rgb(2, 2, 83);
+          color: white;
+          display: none;
+        }
+      }
+    }
+  }
+}

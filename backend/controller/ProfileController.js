@@ -1,4 +1,4 @@
-const userData = require('../databases/userSchema');
+const userData = require('../databases/usersSchema');
 const multer = require("multer");
 const path = require("path");
 const mongoose = require("mongoose");

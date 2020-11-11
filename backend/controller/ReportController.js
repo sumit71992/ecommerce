@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const userData = require("../databases/userSchema");
+const userData = require("../databases/usersSchema");
 const reportData = require("../databases/MedicalReportSchema");
 
 

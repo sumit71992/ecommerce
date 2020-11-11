@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="seller.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <title>Cart</title>
+  </head>
+
+  <body>
+    <%-include("header")-%>
+    <div class="cart">
+      <%if(!user.cart){%>
+      <div class="empty">
+        <span>Cart Empty !!!</span>
+        <img src="/empty-cart.png" alt="">
+        <a href="/">Continue Shopping</a>
+      </div>
+      <%}else{%>
+      <div class="order-container">
+        <div class="order">
+          <img src="/cart-black.png" alt="" />
+          <h3>Order Summary</h3>
+        </div>
+        <% for(let product of Object.values(user.cart.items)){%>
+        <div class="order-items">
+          <div class="display">
+            <div class="photo">
+              <img src="/uploads/<%=product.item.Image%>" alt="" />
+            </div>
+            <div class="specs">
+              <span class="name"><%= (product.item.productName)[0].toUpperCase() + (product.item.productName).slice(1) %></span>
+              <!-- <span>small</span> -->
+            </div>
+          </div>
+          <div class="number">
+            <span><%=product.qty%></span>
+          </div>
+          <div class="price">
+            <span><%=(product.item.price)*(product.qty)%></span>
+          </div>
+        </div>
+
+        <%}%>
+        <div class="sub-order-container">
+          <form action="/checkout" method="POST">
+            <div class="total">
+              <div class="sub-total">
+                <span>Total Amount:</span>
+              </div>
+              <div class="total-price">
+                <span>Rs. <%=user.cart.totalPrice%></span>
+              </div>
+            </div>
+            <div class="ship-address">
+              <input
+                type="text"
+                name="address"
+                placeholder="Enter Address"
+                value=""
+              />
+            </div>
+            <div class="low">
+              <input
+                type="number"
+                name="number"
+                placeholder="Enter Mobile No."
+                value=""
+              />
+            </div>
+            <div class="checkout">
+              <button type="submit">Order Now</button>
+            </div>
+            <div class="checkout">
+              <a href="">Login to Continue</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <%}%>
+    </div>
+  </body>
+</html>
